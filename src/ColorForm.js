@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
 function ColorForm(props) {
+  // we have our input set as an empty string onload
   let [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     // We still want to eliminate the default behavior of our form submittal
     e.preventDefault();
-    // addColor, the function we just built, should be available within props.
+    //calling on our addColor function we passed in as a prop ads our input color into the colors array data
     props.addColor(input);
   };
 
@@ -20,5 +21,4 @@ function ColorForm(props) {
   );
 }
 
-export default ColorForm
-
+export default ColorForm;
